@@ -61,3 +61,42 @@
 .social-icons .icon:hover {
     color: #ccc;
 }
+
+#about {
+    text-align: center;
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+#about h2 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#skills {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+#skills h2 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.skill-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
