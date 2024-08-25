@@ -1,3 +1,11 @@
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) { // Adjust scroll threshold if needed
+        document.body.classList.add('scrolled');
+        document.querySelector('header.fixed-top').style.display = 'flex'; // Show navbar again
+    }
+});
+
+
 document.querySelectorAll('a.nav-hover').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
