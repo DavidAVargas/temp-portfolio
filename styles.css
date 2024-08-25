@@ -100,3 +100,25 @@
     margin-bottom: 20px;
     color: #007bff;
 }
+
+#projects {
+    text-align: center;
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+#projects h2 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.project-box {
+    background-color: #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px;
+    border: 2px solid #007bff;
+}
