@@ -1,4 +1,3 @@
-/* Ensure intro covers the entire screen */
 #intro {
     width: 100%;
     height: 100vh;
@@ -11,13 +10,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 1s ease, visibility 1s ease; /* Smooth transitions */
-    opacity: 1; /* Start fully visible */
-    visibility: visible; /* Start visible */
+    transition: opacity 1s ease, visibility 1s ease; 
+    opacity: 1; 
+    visibility: visible; 
 }
 
-/* Container styling */
+/* Container */ 
 .container {
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-h {
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -27,22 +35,34 @@
     overflow: hidden;
 }
 
+
+
+/* Intro-specific container */
+.intro-container {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 120%; 
+    width: 100%;
+    overflow: hidden;
+}
+
 /* Image styling */
 .image {
-    background-image: url('./img/pic2.jpg'); /* Ensure this path is correct */
+    background-image: url('./img/pic2.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 90%;
+    height: 70%;
     width: 400px;
     animation: img-animate 1s linear forwards, appear 0.3s ease-in-out forwards;
     animation-delay: 4s;
-    border: 2px solid rgb(255, 255, 255); /* Add this for debugging */
+    border: 2px solid rgb(255, 255, 255); 
 }
 
 /* Hide navbar during intro */
 header.fixed-top {
-    display: none; /* Hide navbar */
+    display: none; 
 }
 
 /* Left and right text panels */
@@ -92,7 +112,7 @@ header.fixed-top {
 
 @keyframes move-up {
     from { transform: translateY(0); }
-    to { transform: translateY(-140%); }
+    to { transform: translateY(-100%); }
 }
 
 @keyframes move-down {
@@ -119,13 +139,6 @@ body.scrolled #intro {
     transition: opacity 1s ease-out, visibility 1s ease-out;
 }
 
-/* Fade out the intro section when scrolling down */
-body.scrolled #intro {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-out, visibility 1s ease-out;
-}
-
 /* Fade in the intro section when scrolling back up */
 body.scrolled-back #intro {
     opacity: 1;
@@ -140,7 +153,7 @@ header.fixed-top {
 
 /* Show navbar when the body has the .scrolled class */
 body.scrolled header.fixed-top {
-    display: flex; /* Change from 'none' to 'flex' to show the navbar */
+    display: flex; 
 }
 
 body {
@@ -211,11 +224,12 @@ p {
 }
 
 section {
-    padding: 80px 20px;
+    margin: 0;
+    padding: 20px;
 }
 
 #home {
-    height: 120vh;
+    height: 130vh;
     background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)), url('background.jpg') no-repeat center center/cover;
     color: #fff;
     display: flex;
