@@ -369,6 +369,7 @@ section {
     text-align: center;
     background-color: #fff;
     padding: 60px 20px;
+    font-size: larger;
 }
 
 #about h2 {
@@ -404,6 +405,7 @@ section {
     color: #007bff;
 }
 
+/* Projects Section */
 #projects {
     text-align: center;
     background-color: #fff;
@@ -418,12 +420,65 @@ section {
     display: inline-block;
 }
 
-.project-box {
-    background-color: #007bff; 
+.project-card {
+    background-color: #0097e6; 
     padding: 20px;
     border-radius: 8px;
     margin: 15px;
-    border: 2px solid #007bff; 
+    border: 2px solid #0097e6; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+/* Increase font size for card title and text */
+.project-card .card-title {
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
+}
+
+.project-card .card-text {
+    font-size: 1.1rem; 
+    line-height: 1.5; 
+}
+
+/* Card Image Styling */
+.project-card .card-img-top {
+    border-radius: 8px; 
+}
+
+/* Card Body Styling */
+.project-card .card-body {
+    background-color: #0097e6; 
+    color: #fff; 
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    transform: scale(1.05); 
+}
+
+/* Card Image Styling */
+.project-card .card-img-top {
+    border-radius: 8px; 
+}
+
+/* Card Body Styling */
+.project-card .card-body {
+    background-color: #0097e6; 
+    color: #fff; 
+}
+
+/* Responsive Adjustments for Mobile */
+@media screen and (max-width: 768px) {
+    .project-card {
+        margin: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    }
+
+    .project-card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+    }
 }
 
 #contact {
