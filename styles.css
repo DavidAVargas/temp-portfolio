@@ -16,16 +16,16 @@
 }
 
 /* Container */ 
-.container {
+/* .container {
     align-items: center;
     justify-content: center;
     position: relative; 
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
+} */
 
-.container-h {
+/* .container-h {
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -33,7 +33,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-}
+} */
 
 
 
@@ -54,7 +54,7 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 70%;
-    width: 400px;
+    width: 40vh;
     animation: img-animate 1s linear forwards, appear 0.3s ease-in-out forwards;
     animation-delay: 4s;
     border: 2px solid rgb(255, 255, 255); 
@@ -101,6 +101,58 @@ header.fixed-top {
     top: 30%;
     animation: move-down 1s ease-in-out forwards;
     animation-delay: 4s;
+}
+
+/* Responsive adjustments for mobile and tablets */
+@media screen and (max-width: 768px) {
+    .left, .right {
+        font-size: 3rem;
+        width: 100%;
+        height: auto; 
+        position: static;
+        text-align: center;
+        transform: none;
+        animation: slide-in 1s ease-in-out forwards; 
+    }
+
+    .left p, .right p {
+        animation: none;
+    }
+
+    
+    .intro-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        flex-direction: column; 
+    }
+
+    .image {
+        background-image: url('./img/pic2.jpg'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center top; 
+        height: 300px; 
+        width: 300px;
+        animation: none;
+        border-radius: 50%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Custom animation for mobile view */
+    @keyframes slide-in {
+        from {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 }
 
 /* Animation keyframes */
