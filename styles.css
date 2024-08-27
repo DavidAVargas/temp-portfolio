@@ -115,6 +115,14 @@ header.fixed-top {
         animation: slide-in 1s ease-in-out forwards; 
     }
 
+    .navbar-toggler {
+        display: none; 
+    }
+
+    .navbar {
+        display: none !important; 
+    }
+
     .left p, .right p {
         animation: none;
     }
