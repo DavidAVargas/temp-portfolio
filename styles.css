@@ -208,6 +208,56 @@ body.scrolled header.fixed-top {
     display: flex; 
 }
 
+.scroll-down {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 3s; 
+    z-index: 1000;
+}
+
+.scroll-down span {
+    display: block;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.scroll-down .arrow {
+    width: 30px;
+    height: 30px;
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    40% {
+        transform: translateY(-10px) rotate(45deg);
+    }
+    60% {
+        transform: translateY(-5px) rotate(45deg);
+    }
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f1f6;
