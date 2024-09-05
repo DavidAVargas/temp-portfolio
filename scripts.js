@@ -31,3 +31,24 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert('Thanks for your message! I\'ll get back to you soon.');
+            this.reset(); // Clear the form
+        } else {
+            alert('Oops! There was a problem submitting your form');
+        }
+    }).catch(error => {
+        alert('Oops! There was a problem submitting your form');
+    });
+});
